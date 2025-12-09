@@ -22,7 +22,11 @@ header {
     margin: 20px;
     border-radius: 8px;
 }
-
+.container {
+    max-width: 1200px; /* limits width on large screens */
+    margin: 0 auto;     /* centers the container */
+    padding: 0 50px;    /* space on left and right */
+}
 h1, h2 {
     color: #003366;
 }
