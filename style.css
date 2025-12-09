@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    background: #f7f7f7;
+}
+
+header {
+    background: #003366;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+.content {
+    padding: 20px 40px;
+    background: white;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+h1, h2 {
+    color: #003366;
+}
+
+a {
+    color: #0074D9;
+    font-weight: bold;
+}
+
+pre {
+    background: #eee;
+    padding: 15px;
+    border-radius: 6px;
+}
