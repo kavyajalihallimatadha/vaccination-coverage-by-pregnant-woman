@@ -185,80 +185,74 @@
 
     <ul>
         <li>
-            <strong>Identifying Missing and Inconsistent Data:</strong>  
-            The dataset contained missing values in important columns such as <em>Sample Size</em> and <em>Coverage Estimate</em>.  
-            Additionally, the <em>95% Confidence Interval</em> column contained non-numeric values like <strong>NR</strong> and <strong>NR*</strong>, 
-            which indicate unavailable or unreliable data.
-             <div style="text-align: center; margin: 20px 0;">
-        <img src="Untitled3.png" style="max-width: 80%; height: auto; border: 1px solid #ccc; padding: 5px;">
-        <p style="font-size: 0.9em; color: #555;"</p>
-             <div style="text-align: center; margin: 20px 0;">
-        <img src="Untitled4.png" style="max-width: 80%; height: auto; border: 1px solid #ccc; padding: 5px;">
-        <p style="font-size: 0.9em; color: #555;"</p>
-          <div style="text-align: center; margin: 20px 0;">
-        <img src="Untitled5.png" style="max-width: 80%; height: auto; border: 1px solid #ccc; padding: 5px;">
-        <p style="font-size: 0.9em; color: #555;"</p>  
-    </div>
-                 
-    </div>
+            <strong>Identifying Missing and Inconsistent Data:</strong><br>
+            The dataset contained missing values in columns such as <em>Sample Size</em> and <em>Coverage Estimate</em>.  
+            The <em>95% CI</em> column also had non-numeric values like <strong>NR</strong> and <strong>NR*</strong>.
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="Untitled3.png" style="max-width: 80%; height: auto; border: 1px solid #ccc; padding: 5px;">
+                <p style="font-size: 0.9em; color: #555;">Missing values in Sample Size</p>
+            </div>
+
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="Untitled4.png" style="max-width: 80%; height: auto; border: 1px solid #ccc; padding: 5px;">
+                <p style="font-size: 0.9em; color: #555;">Missing values in Coverage Estimate</p>
+            </div>
+
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="Untitled5.png" style="max-width: 80%; height: auto; border: 1px solid #ccc; padding: 5px;">
+                <p style="font-size: 0.9em; color: #555;">Non-numeric values in 95% CI column</p>
+            </div>
         </li>
 
         <li>
-            <strong>Renaming Columns for Better Readability:</strong>  
-            Some of the original column names were lengthy or unclear. These were renamed to shorter, more meaningful labels to improve readability 
-            and make the analysis easier to follow.
-                <div style="text-align: center; margin: 20px 0;">
-        <img src="Untitled6.png" style="max-width: 70%; height: auto; border: 1px solid #ccc; padding: 5px;">
-        <p style="font-size: 0.9em; color: #555;"</p>
-    </div>
-            
+            <strong>Renaming Columns for Better Readability:</strong><br>
+            Some column names were long or unclear, so they were renamed to more readable labels.
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="Untitled6.png" style="max-width: 70%; height: auto; border: 1px solid #ccc; padding: 5px;">
+                <p style="font-size: 0.9em; color: #555;">Renamed columns for clarity</p>
+            </div>
         </li>
 
         <li>
-            <strong>Handling Missing Values with Median Imputation:</strong>  
-            To address missing values in numerical columns, I used the <strong>median</strong> of each respective column.  
-            This method is effective because the median is not affected by extreme values and helps maintain the overall distribution of the data.  
-            The following changes were made:
+            <strong>Handling Missing Values with Median Imputation:</strong><br>
+            The <strong>median</strong> was used to fill missing values because it is more robust to outliers.
+
             <ul>
-                <li><em>Sample Size</em> missing values were filled with the median.</li>
-                  <div style="text-align: center; margin: 20px 0;">
-        <img src="Untitled7.png" style="max-width: 70%; height: auto; border: 1px solid #ccc; padding: 5px;">
-        <p style="font-size: 0.9em; color: #555;"</p>
-    </div>
-                <li><em>Coverage Estimate</em> missing values were also filled using the median.</li>
-                  <div style="text-align: center; margin: 20px 0;">
-        <img src="Untitled8.png" style="max-width: 70%; height: auto; border: 1px solid #ccc; padding: 5px;">
-        <p style="font-size: 0.9em; color: #555;"</p>
-    </div>
+                <li>
+                    <em>Sample Size</em> missing values were filled with the median.
+                    <div style="text-align: center; margin: 20px 0;">
+                        <img src="Untitled7.png" style="max-width: 70%; height: auto; border: 1px solid #ccc; padding: 5px;">
+                        <p style="font-size: 0.9em; color: #555;">Median used to fill Sample Size</p>
+                    </div>
+                </li>
+
+                <li>
+                    <em>Coverage Estimate</em> missing values were also filled using the median.
+                    <div style="text-align: center; margin: 20px 0;">
+                        <img src="Untitled8.png" style="max-width: 70%; height: auto; border: 1px solid #ccc; padding: 5px;">
+                        <p style="font-size: 0.9em; color: #555;">Median used to fill Coverage Estimate</p>
+                    </div>
+                </li>
             </ul>
         </li>
 
         <li>
-            <strong>Dropping Invalid Confidence Interval Rows:</strong>  
-            The <em>95% CI</em> column contained entries such as <strong>NR</strong> and <strong>NR*</strong>, which could not be converted into numerical form.  
-            Rows containing these values were removed to ensure consistency and reliability in the analysis.
-               <div style="text-align: center; margin: 20px 0;">
-        <img src="Untitled9.png" style="max-width: 70%; height: auto; border: 1px solid #ccc; padding: 5px;">
-        <p style="font-size: 0.9em; color: #555;"</p>
-    </div>
+            <strong>Dropping Invalid Confidence Interval Rows:</strong><br>
+            Rows with <strong>NR</strong> or <strong>NR*</strong> in the <em>95% CI</em> column were removed.
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="Untitled9.png" style="max-width: 70%; height: auto; border: 1px solid #ccc; padding: 5px;">
+                <p style="font-size: 0.9em; color: #555;">Rows with NR/NR* removed</p>
+            </div>
         </li>
     </ul>
 
     <p>
-        Alongside cleaning, exploratory data analysis (EDA) was performed to better understand the structure of the dataset and identify significant patterns. 
-        EDA involves generating visuals, examining relationships between variables, and identifying any anomalies or trends. 
-        This step is crucial because it helps guide the direction of the study and impacts decisions about feature engineering and model selection.
+        Exploratory Data Analysis (EDA) was then performed to identify trends, distributions, and relationships within the dataset. 
+        This helped build a deeper understanding of the factors influencing vaccination coverage.
     </p>
-
-    <p>
-        During EDA, I examined how vaccination coverage varies across different demographic categories such as states, age groups, and racial/ethnic groups. 
-        Plotting distributions and relationships provided insights into the factors that may influence vaccination uptake. 
-        This process helped build a deeper understanding of the dataset before moving on to machine learning model development.
-    </p>
-
-   
 
 </section>
+
 
 
 <section id="model-training">
