@@ -170,9 +170,70 @@
 </section>
 
 <section id="data-cleaning">
-    <h2>3. Data Cleaning & Exploratory Analysis</h2>
-    <p>write about data cleaning</p>
+    <h2>3. Data Cleaning and Exploratory Data Analysis</h2>
+
+    <p>
+        Once the dataset was successfully loaded, the next stage in the data science lifecycle involved cleaning the data and performing exploratory analysis. 
+        Data cleaning is an essential part of any data project because raw data is often incomplete, inconsistent, or difficult to analyze in its original form. 
+        Cleaning the data prepares it for reliable analysis and ensures that any insights or predictions derived from it are accurate and meaningful.
+    </p>
+
+    <p>
+        Data cleaning usually involves several tasks, such as removing unnecessary information, handling missing values, fixing formatting issues, 
+        and transforming variables into formats that are easier to work with. In this project, the data cleaning process consisted of the following key steps:
+    </p>
+
+    <ul>
+        <li>
+            <strong>Identifying Missing and Inconsistent Data:</strong>  
+            The dataset contained missing values in important columns such as <em>Sample Size</em> and <em>Coverage Estimate</em>.  
+            Additionally, the <em>95% Confidence Interval</em> column contained non-numeric values like <strong>NR</strong> and <strong>NR*</strong>, 
+            which indicate unavailable or unreliable data.
+        </li>
+
+        <li>
+            <strong>Renaming Columns for Better Readability:</strong>  
+            Some of the original column names were lengthy or unclear. These were renamed to shorter, more meaningful labels to improve readability 
+            and make the analysis easier to follow.
+        </li>
+
+        <li>
+            <strong>Handling Missing Values with Median Imputation:</strong>  
+            To address missing values in numerical columns, I used the <strong>median</strong> of each respective column.  
+            This method is effective because the median is not affected by extreme values and helps maintain the overall distribution of the data.  
+            The following changes were made:
+            <ul>
+                <li><em>Sample Size</em> missing values were filled with the median.</li>
+                <li><em>Coverage Estimate</em> missing values were also filled using the median.</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Dropping Invalid Confidence Interval Rows:</strong>  
+            The <em>95% CI</em> column contained entries such as <strong>NR</strong> and <strong>NR*</strong>, which could not be converted into numerical form.  
+            Rows containing these values were removed to ensure consistency and reliability in the analysis.
+        </li>
+    </ul>
+
+    <p>
+        Alongside cleaning, exploratory data analysis (EDA) was performed to better understand the structure of the dataset and identify significant patterns. 
+        EDA involves generating visuals, examining relationships between variables, and identifying any anomalies or trends. 
+        This step is crucial because it helps guide the direction of the study and impacts decisions about feature engineering and model selection.
+    </p>
+
+    <p>
+        During EDA, I examined how vaccination coverage varies across different demographic categories such as states, age groups, and racial/ethnic groups. 
+        Plotting distributions and relationships provided insights into the factors that may influence vaccination uptake. 
+        This process helped build a deeper understanding of the dataset before moving on to machine learning model development.
+    </p>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <img src="Untitled3.png" style="max-width: 80%; height: auto; border: 1px solid #ccc; padding: 5px;">
+        <p style="font-size: 0.9em; color: #555;">Figure 4: Example Exploratory Data Visualization</p>
+    </div>
+
 </section>
+
 
 <section id="model-training">
     <h2>4. Model Training and Testing</h2>
