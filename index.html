@@ -245,11 +245,142 @@
             </div>
         </li>
     </ul>
-
+<h3>Exploratory Data Analysis</h3>
     <p>
         Exploratory Data Analysis (EDA) was then performed to identify trends, distributions, and relationships within the dataset. 
         This helped build a deeper understanding of the factors influencing vaccination coverage.
     </p>
+    <p>
+        Once the dataset was cleaned, the next step was to perform Exploratory Data Analysis (EDA). 
+        EDA helps us understand the underlying structure of the data, identify patterns, detect anomalies, 
+        and gain insights that guide later modeling decisions. This stage allows us to visually and statistically explore 
+        how different variables behave and relate to one another.
+    </p>
+
+    <h3>Summary Statistics</h3>
+    <p>
+        The summary statistics provided an overview of the dataset, including distributions, counts, and central tendencies 
+        for both numerical and categorical variables. The dataset contains <strong>4,322 records</strong> across different years, states, 
+        and demographic groups. Two vaccines are included — <strong>Influenza</strong> and <strong>Tdap</strong>. The survey spans from 
+        <strong>2012 to 2022</strong>, giving a wide range for trend analysis.
+    </p>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <img src="summary_stats.png" style="max-width: 85%; height: auto; border: 1px solid #ccc; padding: 5px;">
+        <p style="font-size: 0.9em; color: #555;">Figure: Summary Statistics Output</p>
+    </div>
+
+    <h3>Vaccine Distribution</h3>
+    <p>
+        A value count of the <strong>VACCINE</strong> column showed that Influenza records (2,865 entries) are almost double compared to 
+        Tdap records (1,457 entries). This highlights greater emphasis and availability of influenza vaccination data.
+    </p>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <img src="vaccine_count_plot.png" style="max-width: 70%; height: auto; border: 1px solid #ccc; padding: 5px;">
+        <p style="font-size: 0.9em; color: #555;">Figure: Vaccine Count Distribution</p>
+    </div>
+
+    <h3>Geography Type Distribution</h3>
+    <p>
+        The dataset contains mostly state-level observations, with <strong>4,146 state entries</strong> and <strong>176 national entries</strong>. 
+        This provides strong support for performing deeper geographic trend analysis.
+    </p>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <img src="geo_type_plot.png" style="max-width: 70%; height: auto; border: 1px solid #ccc; padding: 5px;">
+        <p style="font-size: 0.9em; color: #555;">Figure: National vs State Coverage Records</p>
+    </div>
+
+    <h3>Demographic Dimension Distribution</h3>
+    <p>
+        The dataset includes two major demographic dimension types: <strong>Age</strong> and <strong>Race/Ethnicity</strong>. 
+        The most common categories include 25–34 Years, ≥18 Years, White Non-Hispanic, Hispanic, and Black Non-Hispanic. 
+        This wide representation allows meaningful comparison between demographic groups.
+    </p>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <img src="dimension_dist.png" style="max-width: 85%; height: auto; border: 1px solid #ccc; padding: 5px;">
+        <p style="font-size: 0.9em; color: #555;">Figure: Distribution of Dimension Categories</p>
+    </div>
+
+    <h3>Vaccination Estimate Comparisons</h3>
+    <p>
+        Boxplots were used to compare coverage estimates between vaccine types and demographic dimensions. 
+        Influenza coverage appears generally higher and more consistent than Tdap coverage. 
+        Age-based comparisons reveal that some age groups (especially 25–34 Years) tend to have higher vaccination rates.
+    </p>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <img src="estimate_vaccine_box.png" style="max-width: 80%; height: auto; border: 1px solid #ccc; padding: 5px;">
+        <p style="font-size: 0.9em; color: #555;">Figure: Vaccination Estimate Comparison Between Vaccines</p>
+    </div>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <img src="dimension_box.png" style="max-width: 85%; height: auto; border: 1px solid #ccc; padding: 5px;">
+        <p style="font-size: 0.9em; color: #555;">Figure: Coverage Comparison — Age vs Race/Ethnicity</p>
+    </div>
+
+    <h3>Age Group Vaccination Analysis</h3>
+    <p>
+        A focused analysis on age groups showed noticeable differences across the categories. 
+        The <strong>25–34 Years</strong> group generally displayed higher vaccination coverage, while the <strong>18–24 Years</strong> group 
+        tended to have lower averages. These patterns can help public health authorities target specific demographic groups for awareness campaigns.
+    </p>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <img src="age_group_box.png" style="max-width: 85%; height: auto; border: 1px solid #ccc; padding: 5px;">
+        <p style="font-size: 0.9em; color: #555;">Figure: Vaccination Estimates Across Age Groups</p>
+    </div>
+
+    <h3>Coverage Trends Over Time</h3>
+    <p>
+        A line plot of vaccination estimates from 2012 to 2022 revealed an upward trend in vaccination coverage for both Influenza and Tdap. 
+        Coverage increases steadily until around 2019, after which minor fluctuations appear in the following years. 
+        This long-term trend suggests improved awareness and accessibility of maternal vaccination programs.
+    </p>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <img src="trend_plot.png" style="max-width: 90%; height: auto; border: 1px solid #ccc; padding: 5px;">
+        <p style="font-size: 0.9em; color: #555;">Figure: Vaccination Coverage Trend from 2012–2022</p>
+    </div>
+
+    <h3>Top 5 States by Data Availability</h3>
+    <p>
+        The five states with the highest number of records (excluding national data) were:
+    </p>
+    <ul>
+        <li>Wisconsin</li>
+        <li>Delaware</li>
+        <li>Pennsylvania</li>
+        <li>NY–City of New York</li>
+        <li>Missouri</li>
+    </ul>
+
+    <p>
+        These states were analyzed in more detail to examine state-specific vaccination patterns and trends.
+    </p>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <img src="top5_bar.png" style="max-width: 85%; height: auto; border: 1px solid #ccc; padding: 5px;">
+        <p style="font-size: 0.9em; color: #555;">Figure: Average Vaccination Coverage for Top 5 States</p>
+    </div>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <img src="top5_trend.png" style="max-width: 90%; height: auto; border: 1px solid #ccc; padding: 5px;">
+        <p style="font-size: 0.9em; color: #555;">Figure: Yearly Coverage Trends for Top 5 States</p>
+    </div>
+
+    <p>
+        Finally, a grouped summary table was created to display mean coverage values across survey years, states, and vaccine types. 
+        This table provides a compact view of how vaccination rates change over time and across different regions.
+    </p>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <img src="summary_table.png" style="max-width: 90%; height: auto; border: 1px solid #ccc; padding: 5px;">
+        <p style="font-size: 0.9em; color: #555;">Figure: Summary Table of Mean Coverage (Top 5 States)</p>
+    </div>
+
 
 </section>
 
