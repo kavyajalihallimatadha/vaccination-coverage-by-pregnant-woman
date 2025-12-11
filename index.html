@@ -87,11 +87,11 @@
         Data science is a structured process that allows us to extract meaningful insights from data, and this tutorial focuses on four key stages:
     </p>
     <ul>
-        <li><strong>Data Collection</strong> </li>
-        <li><strong>Data Processing</strong> </li>
-        <li><strong>Exploratory Data Analysis and Data Visualization</strong></li>
-        <li><strong>Model Analysis</strong></li>
-        <li><strong>Interpretation of Results</strong> </li>
+        <li>Data Collection</li>
+        <li>Data Processing</li>
+        <li>Exploratory Data Analysis and Data Visualization</li>
+        <li>Model Analysis</li>
+        <li>Interpretation of Results</li>
     </ul>
   <p>
     The overall aim of this data science cycle is to collect data, identify demands and trends, conduct exploratory data analysis, 
@@ -136,7 +136,7 @@
     <h2>2. Data Collection</h2>
 
     <p>
-        The first and most essential step in any data science project is <strong>Data Collection</strong>. 
+        The first and most essential step in any data science project is Data Collection. 
         The quality, completeness, and relevance of the data directly influence the accuracy, reliability, 
         and overall usefulness of the insights we can derive. Depending on the nature of the project, 
         data may originate from several different sources, including:
@@ -152,14 +152,14 @@
         For this project, the dataset was obtained directly from the 
         <a href="https://data.cdc.gov/Pregnancy-Vaccination/Vaccination-Coverage-among-Pregnant-Women/h7pm-wmjc/about_data" target="_blank">
         Centers for Disease Control and Prevention (CDC)</a>. 
-        The dataset focuses specifically on <strong>vaccination coverage among pregnant women in the United States</strong>. 
+        The dataset focuses specifically on vaccination coverage among pregnant women in the United States. 
         Since it is well-organized and contains a substantial number of observations across multiple years, states, 
         and demographic categories, it provides a strong foundation for meaningful analysis.
     </p>
 
     <p>
         Effective data collection is not just about acquiring large datasets—what matters most is that the data is 
-        <strong>relevant, complete, and reliable</strong>. A well-collected dataset forms the basis for subsequent 
+        relevant, complete, and reliable. A well-collected dataset forms the basis for subsequent 
         stages of the data science lifecycle, including data cleaning, exploratory data analysis, modeling, and interpretation.
     </p>
 
@@ -197,20 +197,20 @@
         any insights or predictions derived from it are accurate and meaningful. </p> <p> Data cleaning usually involves several tasks, 
             such as removing unnecessary information, handling missing values, fixing formatting issues, and transforming variables into 
             formats that are easier to work with. In this project, the data cleaning process consisted of the following key steps: </p>
-    <ul> <li> <strong>Identifying Missing and Inconsistent Data:</strong><br> The dataset contained missing values in columns such as
-        <em>Sample Size</em> and <em>Coverage Estimate</em>. The <em>95% CI</em> column also had non-numeric values like <strong>NR</strong>
-        and <strong>NR*</strong>.
+    <ul> <li> Identifying Missing and Inconsistent Data:<br> The dataset contained missing values in columns such as
+        <em>Sample Size</em> and <em>Coverage Estimate</em>. The <em>95% CI</em> column also had non-numeric values like NR
+        andNR*.
         <div style="text-align: center; margin: 20px 0;"> 
             <img src="Untitled3.png"> </div> <div style="text-align: center; margin: 20px 0;">
                 <img src="Untitled4.png"> </div> <div style="text-align: center; margin: 20px 0;"> 
                     <img src="Untitled5.png"> </div>
     </li>
-        <li> <strong>Renaming Columns for Better Readability:</strong><br> Some column names were long or unclear, so they were renamed
+        <li> Renaming Columns for Better Readability:<br> Some column names were long or unclear, so they were renamed
             to more readable labels.
             <div style="text-align: center; margin: 20px 0;">
                 <img src="Untitled6.png"> </div> </li>
-        <li> <strong>Handling Missing Values with Median Imputation:</strong><br> 
-            The <strong>median</strong> was used to fill missing
+        <li> Handling Missing Values with Median Imputation:<br> 
+            The median was used to fill missing
                 values because it is more robust to outliers.
             <em>Sample Size</em> missing values were filled with the median.
                     <div style="text-align: center; margin: 20px 0;"> <img src="Untitled7.png"> </div>
@@ -218,7 +218,7 @@
                     <div style="text-align: center; margin: 20px 0;"> <img src="Untitled8.png"> </div>
                 
         </li>
-        <li> <strong>Dropping Invalid Confidence Interval Rows:</strong><br> Rows with <strong>NR</strong> or <strong>NR*</strong>
+        <li> Dropping Invalid Confidence Interval Rows:<br> Rows with NR or NR*
             in the <em>95% CI</em> column were removed. 
             <div style="text-align: center; margin: 20px 0;"> <img src="Untitled9.png"> </div> </li> </ul>
     <h3>Exploratory Data Analysis</h3> 
@@ -231,20 +231,20 @@
 
 <ul>
     <li>
-        <strong>Overview and Summary Statistics</strong><br>
-        The dataset contains <strong>4,322 observations</strong> across multiple states, years, and demographic groups, covering two important maternal vaccines:
-        <strong>Influenza</strong> and <strong>Tdap</strong>. Summary statistics reveal that vaccination coverage 
-        estimates range widely—from as low as <strong>5.2%</strong> to nearly <strong>99.6%</strong>. This large spread 
+        Overview and Summary Statistics<br>
+        The dataset contains 4,322 observations across multiple states, years, and demographic groups, covering two important maternal vaccines:
+        Influenza and Tdap. Summary statistics reveal that vaccination coverage 
+        estimates range widely—from as low as 5.2% to nearly99.6%. This large spread 
         suggests that vaccination behaviors vary substantially across different groups and locations.
         <div style="text-align:center; margin:20px 0;"> <img src="Untitled10.png"> </div>
         <p>
-            The most frequent demographic category in the dataset is <strong>25–34 Years</strong>, and the most common geography is <strong>Wisconsin</strong>. The survey years span from <strong>2012 to 2022</strong>, providing a decade-long view of trends.
+            The most frequent demographic category in the dataset is 25–34 Years, and the most common geography is Wisconsin. The survey years span from 2012 to 2022, providing a decade-long view of trends.
         </p>
     </li>
 
     <li>
-        <strong>Vaccine Distribution</strong><br>
-        The dataset contains nearly twice as many records for <strong>Influenza</strong> (2,865) compared to <strong>Tdap</strong> (1,457). This difference reflects a broader availability and longer history of flu vaccine reporting among pregnant women.
+        Vaccine Distribution<br>
+        The dataset contains nearly twice as many records for Influenza (2,865) compared to Tdap (1,457). This difference reflects a broader availability and longer history of flu vaccine reporting among pregnant women.
         <div style="text-align:center; margin:20px 0;"> <img src="Untitled11.png"> </div>
         <div style="text-align:center; margin:20px 0;"> <img src="Untitled15.png"> </div>
         <p>
@@ -254,15 +254,15 @@
     </li>
 
     <li>
-        <strong>Geographic Distribution</strong><br>
-        Most entries in the dataset are state-level records (<strong>4,146</strong>), with only <strong>176</strong> national-level entries. This means state differences play a major role in shaping overall trends, and geographical variations are an important factor to explore.
+        Geographic Distribution<br>
+        Most entries in the dataset are state-level records (4,146), with only 176 national-level entries. This means state differences play a major role in shaping overall trends, and geographical variations are an important factor to explore.
         <div style="text-align:center; margin:20px 0;"> <img src="Untitled12.png"> </div>
         <div style="text-align:center; margin:20px 0;"> <img src="Untitled30.png"> </div>
     </li>
 
     <li>
-        <strong>Demographic Dimension Analysis</strong><br>
-        The dataset includes two main dimension types: <strong>Age</strong> and <strong>Race/Ethnicity</strong>, each providing important insights into vaccination gaps or strengths. Among all dimension categories, the highest representation comes from:
+        Demographic Dimension Analysis<br>
+        The dataset includes two main dimension types:Age and Race/Ethnicity, each providing important insights into vaccination gaps or strengths. Among all dimension categories, the highest representation comes from:
         <ul>
             <li>25–34 Years</li>
             <li>≥18 Years</li>
@@ -272,25 +272,25 @@
         </ul>
         <div style="text-align:center; margin:20px 0;"> <img src="Untitled31.png"> </div>
         <p>
-            Coverage differences between <strong>Age</strong> and <strong>Race/Ethnicity</strong> groups reveal interesting patterns—age groups tend to show higher consistency, while racial and ethnic categories show more variability.
+            Coverage differences between Age and Race/Ethnicity groups reveal interesting patterns—age groups tend to show higher consistency, while racial and ethnic categories show more variability.
         </p>
         <div style="text-align:center; margin:20px 0;"> <img src="Untitled32.png"> </div>
     </li>
 
     <li>
-        <strong>Age Group Vaccination Patterns</strong><br>
-        When examining age groups specifically, a clear pattern emerges: the <strong>25–34 Years</strong> group consistently displays higher vaccination coverage for both vaccines, while the <strong>18–24 Years</strong> group generally shows lower coverage. These differences may reflect varying levels of healthcare access, prenatal care engagement, or awareness.
+       Age Group Vaccination Patterns<br>
+        When examining age groups specifically, a clear pattern emerges: the 25–34 Years group consistently displays higher vaccination coverage for both vaccines, while the 18–24 Years group generally shows lower coverage. These differences may reflect varying levels of healthcare access, prenatal care engagement, or awareness.
         <div style="text-align:center; margin:20px 0;"> <img src="Untitled33.png"> </div>
     </li>
 
     <li>
-        <strong>Yearly Coverage Trends (2012–2022)</strong><br>
-        A decade-long trend analysis shows a gradual increase in vaccination coverage for both Influenza and Tdap. Coverage rises steadily until around <strong>2019</strong>, followed by slight fluctuations during 2020–2022—likely influenced by the COVID-19 pandemic, which disrupted healthcare access and introduced new vaccination priorities.
+        Yearly Coverage Trends (2012–2022)<br>
+        A decade-long trend analysis shows a gradual increase in vaccination coverage for both Influenza and Tdap. Coverage rises steadily until around 2019, followed by slight fluctuations during 2020–2022—likely influenced by the COVID-19 pandemic, which disrupted healthcare access and introduced new vaccination priorities.
         <div style="text-align:center; margin:20px 0;"> <img src="Untitled18.png"> </div>
     </li>
 
     <li>
-        <strong>State-Level Insights</strong><br>
+       State-Level Insights<br>
         Excluding national-level data, the top 5 states with the most available records are:
         <ul>
             <li>Wisconsin</li>
@@ -326,7 +326,7 @@
     <p>
         Since machine learning models require numerical values, all categorical columns 
         (such as <em>VACCINE</em>, <em>GEOGRAPHY</em>, <em>DIMENSION</em>, etc.) 
-        were converted into numerical labels using <strong>Label Encoding</strong>. 
+        were converted into numerical labels using Label Encoding. 
         This transformed the dataset into a form that could be processed by machine learning algorithms 
         without losing the underlying categorical relationships.
     </p>
@@ -337,24 +337,24 @@
     <p>
         The input features included:</p>
     <ul>
-        <li><strong>VACCINE</strong> (Influenza or Tdap)</li>
-        <li><strong>GEOGRAPHY</strong> (State/National)</li>
-        <li><strong>GEOGRAPHY-TYPE</strong></li>
-        <li><strong>DIMENSION-TYPE</strong> (Age or Race/Ethnicity)</li>
-        <li><strong>DIMENSION</strong> (Specific age group or demographic group)</li>
-        <li><strong>SURVEY-YEAR</strong> (2012–2022)</li>
+        <li>VACCINE(Influenza or Tdap)</li>
+        <li>GEOGRAPHY (State/National)</li>
+        <li>GEOGRAPHY-TYPE</li>
+        <li>DIMENSION-TYPE(Age or Race/Ethnicity)</li>
+        <li>DIMENSION (Specific age group or demographic group)</li>
+        <li>SURVEY-YEAR(2012–2022)</li>
     </ul>
 
     <p>
-        The target variable was the <strong>ESTIMATE</strong>, 
+        The target variable was theESTIMATE, 
         which represents the vaccination coverage percentage.
     </p>
  <div style="text-align: center; margin: 20px 0;">
         <img src="Untitled24.png">
     </div>
     <p>
-        The dataset was then split into <strong>80% training data</strong> and 
-        <strong>20% testing data</strong> using the <em>train_test_split</em> method. 
+        The dataset was then split into 80% training data and 
+        20% testing data using the <em>train_test_split</em> method. 
         This ensured fair evaluation by training the model on one portion of the data and testing it on unseen values.
     </p>
      <div style="text-align: center; margin: 20px 0;">
@@ -363,7 +363,7 @@
 
     <h3>Model 1: Linear Regression</h3>
     <p>
-        The first model applied was a <strong>Linear Regression</strong> model. 
+        The first model applied was a Linear Regression model. 
         This simple model attempts to describe the relationship between predictors and vaccination coverage 
         through a straight-line equation. 
         While linear models are easy to interpret, they may not fully capture complex nonlinear relationships 
@@ -383,7 +383,7 @@
 
     <h3>Model 2: Random Forest Regressor</h3>
     <p>
-        To improve predictive performance, a <strong>Random Forest Regressor</strong> 
+        To improve predictive performance, a Random Forest Regressor
         was trained. This model uses multiple decision trees and combines their outputs, 
         making it capable of capturing complex patterns, nonlinear interactions, 
         and variations in the dataset.
@@ -398,7 +398,7 @@
 
     <p>
         These metrics indicate that the Random Forest model explains approximately 
-        <strong>80% of the variation</strong> in vaccination coverage data, 
+    80% of the variation in vaccination coverage data, 
         making it a strong predictive model compared to Linear Regression. 
         The model successfully leveraged demographic, geographic, and temporal factors 
         to produce more accurate predictions.
@@ -417,7 +417,7 @@
 
     <h3>Model Performance Comparison</h3>
     <p>
-        The <strong>Linear Regression</strong> model delivered modest performance, with an R² score of 0.27. 
+        The Linear Regression model delivered modest performance, with an R² score of 0.27. 
         This indicates that the linear model could only explain about 27% of the variance in vaccination coverage. 
         The relatively high MAE value (9.79) suggests that its predictions deviated from the actual coverage values 
         by nearly 10 percentage points on average. 
