@@ -133,55 +133,71 @@
 
 <section id="data-collection">
     <h2>2. Data Collection</h2>
+
     <p>
-        The first and essential step in any data science project is Data Collection. The quality and volume of the data we work with 
-        directly influence the accuracy and usefulness of the results. Data can be collected from a variety of sources depending on the project 
-        requirements. Common sources include:
+        The first and most essential step in any data science project is <strong>Data Collection</strong>. 
+        The quality, completeness, and relevance of the data directly influence the accuracy, reliability, 
+        and overall usefulness of the insights we can derive. Depending on the nature of the project, 
+        data may originate from several different sources, including:
     </p>
+
     <ul>
-        <li>Web scraping from publicly available websites or portals.</li>
-        <li>Downloading datasets from reliable repositories, open data platforms, or government databases.</li>
-        <li>Data generated from internal systems, experiments, or code simulations.</li>
+        <li>Web scraping from publicly accessible websites or portals.</li>
+        <li>Downloading datasets from trusted repositories, open data platforms, or government databases.</li>
+        <li>Data generated from internal systems, experiments, surveys, or simulations.</li>
     </ul>
+
     <p>
-        For this tutorial, I have chosen to download the dataset and load it from my local system. The dataset focuses on vaccination coverage among pregnant 
-        women in the United States and was obtained from the <a href="https://data.cdc.gov/Pregnancy-Vaccination/Vaccination-Coverage-among-Pregnant-Women/h7pm-wmjc/about_data" target="_blank">
-        Centers for Disease Control and Prevention (CDC)</a>. By using a dataset that is well-structured and has a satisfactory volume of data, 
-        we can ensure that the subsequent analysis and modeling will yield meaningful insights. 
+        For this project, the dataset was obtained directly from the 
+        <a href="https://data.cdc.gov/Pregnancy-Vaccination/Vaccination-Coverage-among-Pregnant-Women/h7pm-wmjc/about_data" target="_blank">
+        Centers for Disease Control and Prevention (CDC)</a>. 
+        The dataset focuses specifically on <strong>vaccination coverage among pregnant women in the United States</strong>. 
+        Since it is well-organized and contains a substantial number of observations across multiple years, states, 
+        and demographic categories, it provides a strong foundation for meaningful analysis.
     </p>
+
     <p>
-        Collecting a good dataset is not just about the number of records but also about its completeness, relevance, and reliability. A well-collected 
-        dataset forms the foundation for the next stages in the data science lifecycle, including data processing, exploratory analysis, and predictive modeling.
+        Effective data collection is not just about acquiring large datasets—what matters most is that the data is 
+        <strong>relevant, complete, and reliable</strong>. A well-collected dataset forms the basis for the subsequent 
+        stages of the data science lifecycle, including data cleaning, exploratory data analysis, modeling, and interpretation.
     </p>
 
     <h3>Importing Python Libraries</h3>
     <p>
-        Once the dataset is available, the next step is to import the necessary Python libraries. Python provides a rich ecosystem of libraries 
-        that enable us to efficiently process, analyze, and visualize data. Some of the key libraries that will be used include:
+        After acquiring the dataset, the next step is to import the essential Python libraries. 
+        Python provides a powerful ecosystem for data science, offering libraries for data manipulation, visualization, 
+        and machine learning. The following image shows the key libraries imported for this project:
     </p>
+
     <div style="text-align: center; margin: 20px 0;">
-        <img src="Untitled.png">
+        <img src="Untitled.png" alt="Library Imports">
     </div>
 
     <h3>Download and Import the Data</h3>
     <p>
-        Extract the CSV file from the provided link, and ensure that you move it into the same folder where you are running your Python program 
-        or Jupyter Notebook.
+        Once the CSV file has been downloaded from the CDC platform, it should be placed in the same directory as your 
+        Python script or Jupyter Notebook. This ensures that the file can be easily accessed and loaded into a pandas DataFrame 
+        for analysis.
     </p>
+
     <div style="text-align: center; margin: 20px 0;">
-        <img src="Untitled1.png">
+        <img src="Untitled1.png" alt="Data Loading">
     </div>
 
-    <h3>Understanding the Data</h3> 
+    <h3>Understanding the Data</h3>
     <p>
-        Before moving on to the next stages of the data science process, it is important to understand the dataset we are working with. 
-        Each row represents an individual observation, and each column contains a specific attribute or measurement. Taking time to explore 
-        and familiarize yourself with the data is crucial for ensuring meaningful analysis in later steps.
+        Before performing any transformations or analysis, it is important to first understand the structure of the dataset. 
+        Each row represents a single observation, while each column corresponds to a specific variable, such as year, state, 
+        demographic group, or vaccination estimate. Taking time to explore the dataset helps ensure that decisions made in later 
+        stages—such as cleaning, modeling, or interpreting results—are based on a solid understanding of the underlying data.
     </p>
+
     <div style="text-align: center; margin: 20px 0;">
-        <img src="Untitled2.png">
+        <img src="Untitled2.png" alt="Dataset Preview">
     </div>
+
 </section>
+
 
 <section id="data-cleaning">
     <h2>3. Data Cleaning and Exploratory Data Analysis</h2>
