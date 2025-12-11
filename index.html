@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vaccination Coverage Analysis Among Pregnant Women</title>
+
     <style>
         /* Body styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Times New Roman", serif;
             margin: 0;
-            padding: 0 75px; /* space on left and right */
+            padding: 0 75px;
             line-height: 1.6;
             color: #333333;
+            text-align: center;
         }
 
         /* Header styling */
         header {
-            text-align: center;
             padding: 50px 0;
             background-color: #f2f2f2;
         }
@@ -26,8 +27,7 @@
             margin: 0;
         }
 
-        
-        /* Sections styling */
+        /* Section styling */
         section {
             margin-bottom: 50px;
         }
@@ -36,25 +36,32 @@
             color: #222222;
             border-bottom: 2px solid #ddd;
             padding-bottom: 5px;
+            display: inline-block;
         }
 
-        p {
-            margin-top: 10px;
+        img {
+            width: 600px;
+            height: auto;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        ul {
+            display: inline-block;
+            text-align: left;
         }
     </style>
 </head>
+
 <body>
 
-  <header>
-    <h1 style="text-align: center; font-weight: bold;">
-        Vaccination Coverage Analysis Among Pregnant Women
-    </h1>
+<header>
+    <h1>Vaccination Coverage Analysis Among Pregnant Women</h1>
 </header>
-    <div style="text-align: center; margin: 20px 0;">
-        <img src="Untitled35.png" style="max-width: 80%; height: auto; border: 1px solid #ccc; padding: 5px;">
-        <p style="font-size: 0.9em; color: #555;"</p>
-    </div>
-<nav>
+
+<div style="margin: 20px 0;">
+    <img src="Untitled35.png">
+</div>
     <h2>Table of Contents</h2>
     <ul>
         <li><a href="#introduction">1. Introduction</a></li>
@@ -147,8 +154,7 @@
         that enable us to efficiently process, analyze, and visualize data. Some of the key libraries that will be used include:
     </p>
     <div style="text-align: center; margin: 20px 0;">
-        <img src="Untitled.png" style="max-width: 80%; height: auto; border: 1px solid #ccc; padding: 5px;">
-        <p style="font-size: 0.9em; color: #555;"</p>
+        <img src="Untitled.png">
     </div>
 
     <h3>Download and Import the Data</h3>
@@ -157,8 +163,7 @@
         or Jupyter Notebook.
     </p>
     <div style="text-align: center; margin: 20px 0;">
-        <img src="Untitled1.png" style="max-width: 70%; height: auto; border: 1px solid #ccc; padding: 5px;">
-        <p style="font-size: 0.9em; color: #555;"</p>
+        <img src="Untitled1.png">
     </div>
 
     <h3>Understanding the Data</h3> 
@@ -168,8 +173,7 @@
         and familiarize yourself with the data is crucial for ensuring meaningful analysis in later steps.
     </p>
     <div style="text-align: center; margin: 20px 0;">
-        <img src="Untitled2.png" style="max-width: 70%; height: auto; border: 1px solid #ccc; padding: 5px;">
-        <p style="font-size: 0.9em; color: #555;"</p>
+        <img src="Untitled2.png">
     </div>
 </section>
 
@@ -193,18 +197,15 @@
             The dataset contained missing values in columns such as <em>Sample Size</em> and <em>Coverage Estimate</em>.  
             The <em>95% CI</em> column also had non-numeric values like <strong>NR</strong> and <strong>NR*</strong>.
             <div style="text-align: center; margin: 20px 0;">
-                <img src="Untitled3.png" style="max-width: 80%; height: auto; border: 1px solid #ccc; padding: 5px;">
-                <p style="font-size: 0.9em; color: #555;"</p>
+                <img src="Untitled3.png">
             </div>
 
             <div style="text-align: center; margin: 20px 0;">
-                <img src="Untitled4.png" style="max-width: 80%; height: auto; border: 1px solid #ccc; padding: 5px;">
-                <p style="font-size: 0.9em; color: #555;"</p>
+                <img src="Untitled4.png">
             </div>
 
             <div style="text-align: center; margin: 20px 0;">
-                <img src="Untitled5.png" style="max-width: 80%; height: auto; border: 1px solid #ccc; padding: 5px;">
-                <p style="font-size: 0.9em; color: #555;"</p>
+                <img src="Untitled5.png">
             </div>
         </li>
 
@@ -212,8 +213,7 @@
             <strong>Renaming Columns for Better Readability:</strong><br>
             Some column names were long or unclear, so they were renamed to more readable labels.
             <div style="text-align: center; margin: 20px 0;">
-                <img src="Untitled6.png" style="max-width: 70%; height: auto; border: 1px solid #ccc; padding: 5px;">
-                <p style="font-size: 0.9em; color: #555;"</p>
+                <img src="Untitled6.png">
             </div>
         </li>
 
@@ -225,16 +225,14 @@
                 <li>
                     <em>Sample Size</em> missing values were filled with the median.
                     <div style="text-align: center; margin: 20px 0;">
-                        <img src="Untitled7.png" style="max-width: 70%; height: auto; border: 1px solid #ccc; padding: 5px;">
-                        <p style="font-size: 0.9em; color: #555;"</p>
+                        <img src="Untitled7.png">
                     </div>
                 </li>
 
                 <li>
                     <em>Coverage Estimate</em> missing values were also filled using the median.
                     <div style="text-align: center; margin: 20px 0;">
-                        <img src="Untitled8.png" style="max-width: 70%; height: auto; border: 1px solid #ccc; padding: 5px;">
-                        <p style="font-size: 0.9em; color: #555;"</p>
+                        <img src="Untitled8.png">
                     </div>
                 </li>
             </ul>
@@ -244,8 +242,7 @@
             <strong>Dropping Invalid Confidence Interval Rows:</strong><br>
             Rows with <strong>NR</strong> or <strong>NR*</strong> in the <em>95% CI</em> column were removed.
             <div style="text-align: center; margin: 20px 0;">
-                <img src="Untitled9.png" style="max-width: 70%; height: auto; border: 1px solid #ccc; padding: 5px;">
-                <p style="font-size: 0.9em; color: #555;"</p>
+                <img src="Untitled9.png">
             </div>
         </li>
     </ul>
@@ -268,8 +265,7 @@
     </p>
 
     <div style="text-align:center; margin:20px 0;">
-        <img src="Untitled10.png" style="max-width:85%; border:1px solid #ccc; padding:5px;">
-        <p style="font-size:0.9em; color:#555;">Figure: Summary Statistics Output</p>
+        <img src="Untitled10.png">
     </div>
 
     <p>
@@ -285,12 +281,10 @@
     </p>
 
     <div style="text-align:center; margin:20px 0;">
-        <img src="Untitled11.png" style="max-width:70%; border:1px solid #ccc; padding:5px;">
-        <p style="font-size:0.9em; color:#555;">Figure: Vaccine Count Distribution</p>
+        <img src="Untitled11.png">
     </div>
  <div style="text-align:center; margin:20px 0;">
-        <img src="Untitled15.png" style="max-width:80%; border:1px solid #ccc; padding:5px;">
-        <p style="font-size:0.9em; color:#555;">Figure: Vaccination Estimate Comparison Between Vaccines</p>
+        <img src="Untitled15.png">
     </div>
     <p>
         When comparing vaccination estimates between the two vaccines, Influenza shows a higher and more consistent 
@@ -299,8 +293,7 @@
     </p>
 
     <div style="text-align:center; margin:20px 0;">
-        <img src="Untitled29.png" style="max-width:80%; border:1px solid #ccc; padding:5px;">
-        <p style="font-size:0.9em; color:#555;">Figure: Vaccination Estimate Comparison Between Vaccines</p>
+        <img src="Untitled29.png" >
     </div>
 
     <h3>3.3 Geographic Distribution</h3>
@@ -311,12 +304,10 @@
     </p>
 
     <div style="text-align:center; margin:20px 0;">
-        <img src="Untitled12.png" style="max-width:70%; border:1px solid #ccc; padding:5px;">
-        <p style="font-size:0.9em; color:#555;">Figure: National vs State Coverage Records</p>
+        <img src="Untitled12.png">
     </div>
     <div style="text-align:center; margin:20px 0;">
-        <img src="Untitled30.png" style="max-width:70%; border:1px solid #ccc; padding:5px;">
-        <p style="font-size:0.9em; color:#555;">Figure: National vs State Coverage Records</p>
+        <img src="Untitled30.png">
     </div>
 
     <h3>3.4 Demographic Dimension Analysis</h3>
@@ -334,8 +325,7 @@
         <li>Black, Non-Hispanic</li>
     </ul>
 <div style="text-align:center; margin:20px 0;">
-        <img src="Untitled31.png" style="max-width:85%; border:1px solid #ccc; padding:5px;">
-        <p style="font-size:0.9em; color:#555;">Figure: Coverage Comparison — Age vs Race/Ethnicity</p>
+        <img src="Untitled31.png">
     </div>
     <p>
         Coverage differences between <strong>Age</strong> and <strong>Race/Ethnicity</strong> groups reveal interesting patterns—age groups 
@@ -343,8 +333,7 @@
     </p>
 
     <div style="text-align:center; margin:20px 0;">
-        <img src="Untitled32.png" style="max-width:85%; border:1px solid #ccc; padding:5px;">
-        <p style="font-size:0.9em; color:#555;">Figure: Coverage Comparison — Age vs Race/Ethnicity</p>
+        <img src="Untitled32.png" >
     </div>
 
     <h3>3.5 Age Group Vaccination Patterns</h3>
@@ -356,8 +345,7 @@
     </p>
 
     <div style="text-align:center; margin:20px 0;">
-        <img src="Untitled33.png" style="max-width:85%; border:1px solid #ccc; padding:5px;">
-        <p style="font-size:0.9em; color:#555;">Figure: Vaccination Estimates Across Age Groups</p>
+        <img src="Untitled33.png">
     </div>
 
     <h3>3.6 Yearly Coverage Trends (2012–2022)</h3>
@@ -368,8 +356,7 @@
     </p>
 
     <div style="text-align:center; margin:20px 0;">
-        <img src="Untitled18.png" style="max-width:90%; border:1px solid #ccc; padding:5px;">
-        <p style="font-size:0.9em; color:#555;">Figure: Vaccination Coverage Trend (2012–2022)</p>
+        <img src="Untitled18.png">
     </div>
 
     <h3>3.7 State-Level Insights</h3>
@@ -392,19 +379,19 @@
     </p>
 
     <div style="text-align:center; margin:20px 0;">
-        <img src="Untitled19.png" style="max-width:85%; border:1px solid #ccc; padding:5px;">
+        <img src="Untitled19.png">
     </div>
 
     <div style="text-align:center; margin:20px 0;">
-        <img src="Untitled20.png" style="max-width:90%; border:1px solid #ccc; padding:5px;">
+        <img src="Untitled20.png">
     </div>
 
     <div style="text-align:center; margin:20px 0;">
-        <img src="Untitled22.png" style="max-width:90%; border:1px solid #ccc; padding:5px;">
+        <img src="Untitled22.png">
     </div>
 
 <div style="text-align:center; margin:20px 0;">
-        <img src="Untitled34.png" style="max-width:90%; border:1px solid #ccc; padding:5px;">
+        <img src="Untitled34.png">
     </div>
 </section>
 
@@ -430,8 +417,7 @@
         without losing the underlying categorical relationships.
     </p>
      <div style="text-align: center; margin: 20px 0;">
-        <img src="Untitled23.png" style="max-width: 85%; height: auto; border: 1px solid #ccc; padding: 5px;">
-        <p style="font-size: 0.9em; color: #555;">Figure: Summary Statistics Output</p>
+        <img src="Untitled23.png">
     </div>
 
     <p>
@@ -450,8 +436,7 @@
         which represents the vaccination coverage percentage.
     </p>
  <div style="text-align: center; margin: 20px 0;">
-        <img src="Untitled24.png" style="max-width: 85%; height: auto; border: 1px solid #ccc; padding: 5px;">
-        <p style="font-size: 0.9em; color: #555;">Figure: Summary Statistics Output</p>
+        <img src="Untitled24.png">
     </div>
     <p>
         The dataset was then split into <strong>80% training data</strong> and 
@@ -459,8 +444,7 @@
         This ensured fair evaluation by training the model on one portion of the data and testing it on unseen values.
     </p>
      <div style="text-align: center; margin: 20px 0;">
-        <img src="Untitled25.png" style="max-width: 85%; height: auto; border: 1px solid #ccc; padding: 5px;">
-        <p style="font-size: 0.9em; color: #555;">Figure: Summary Statistics Output</p>
+        <img src="Untitled25.png">
     </div>
 
     <h3>Model 1: Linear Regression</h3>
@@ -472,15 +456,13 @@
         present in public health data.
     </p>
      <div style="text-align: center; margin: 20px 0;">
-        <img src="Untitled26.png" style="max-width: 85%; height: auto; border: 1px solid #ccc; padding: 5px;">
-        <p style="font-size: 0.9em; color: #555;">Figure: Summary Statistics Output</p>
+        <img src="Untitled26.png">
     </div>
 
     <p>The Linear Regression model produced the following performance metrics:</p>
     <ul>
          <div style="text-align: center; margin: 20px 0;">
-        <img src="Untitled27.png" style="max-width: 85%; height: auto; border: 1px solid #ccc; padding: 5px;">
-        <p style="font-size: 0.9em; color: #555;">Figure: Summary Statistics Output</p>
+        <img src="Untitled27.png">
     </div>
         
     </ul>
@@ -496,8 +478,7 @@
     <p>The Random Forest model achieved significantly better results:</p>
     <ul>
        <div style="text-align: center; margin: 20px 0;">
-        <img src="Untitled28.png" style="max-width: 85%; height: auto; border: 1px solid #ccc; padding: 5px;">
-        <p style="font-size: 0.9em; color: #555;">Figure: Summary Statistics Output</p>
+        <img src="Untitled28.png">
     </div>
     </ul>
 
