@@ -397,6 +397,7 @@
         predicted using demographic, geographic, and temporal variables such as vaccine type, state, age group, 
         and survey year.
     </p>
+    
 
     <h3>Data Preparation for Modeling</h3>
     <p>
@@ -406,6 +407,10 @@
         This transformed the dataset into a form that could be processed by machine learning algorithms 
         without losing the underlying categorical relationships.
     </p>
+     <div style="text-align: center; margin: 20px 0;">
+        <img src="Untitled23.png" style="max-width: 85%; height: auto; border: 1px solid #ccc; padding: 5px;">
+        <p style="font-size: 0.9em; color: #555;">Figure: Summary Statistics Output</p>
+    </div>
 
     <p>
         The input features included:</p>
@@ -422,12 +427,19 @@
         The target variable was the <strong>ESTIMATE</strong>, 
         which represents the vaccination coverage percentage.
     </p>
-
+ <div style="text-align: center; margin: 20px 0;">
+        <img src="Untitled24.png" style="max-width: 85%; height: auto; border: 1px solid #ccc; padding: 5px;">
+        <p style="font-size: 0.9em; color: #555;">Figure: Summary Statistics Output</p>
+    </div>
     <p>
         The dataset was then split into <strong>80% training data</strong> and 
         <strong>20% testing data</strong> using the <em>train_test_split</em> method. 
         This ensured fair evaluation by training the model on one portion of the data and testing it on unseen values.
     </p>
+     <div style="text-align: center; margin: 20px 0;">
+        <img src="Untitled25.png" style="max-width: 85%; height: auto; border: 1px solid #ccc; padding: 5px;">
+        <p style="font-size: 0.9em; color: #555;">Figure: Summary Statistics Output</p>
+    </div>
 
     <h3>Model 1: Linear Regression</h3>
     <p>
@@ -437,11 +449,18 @@
         While linear models are easy to interpret, they may not fully capture complex nonlinear relationships 
         present in public health data.
     </p>
+     <div style="text-align: center; margin: 20px 0;">
+        <img src="Untitled26.png" style="max-width: 85%; height: auto; border: 1px solid #ccc; padding: 5px;">
+        <p style="font-size: 0.9em; color: #555;">Figure: Summary Statistics Output</p>
+    </div>
 
     <p>The Linear Regression model produced the following performance metrics:</p>
     <ul>
-        <li><strong>Mean Absolute Error (MAE):</strong> 9.79</li>
-        <li><strong>R² Score:</strong> 0.27</li>
+         <div style="text-align: center; margin: 20px 0;">
+        <img src="Untitled27.png" style="max-width: 85%; height: auto; border: 1px solid #ccc; padding: 5px;">
+        <p style="font-size: 0.9em; color: #555;">Figure: Summary Statistics Output</p>
+    </div>
+        
     </ul>
 
     <h3>Model 2: Random Forest Regressor</h3>
@@ -454,8 +473,10 @@
 
     <p>The Random Forest model achieved significantly better results:</p>
     <ul>
-        <li><strong>Mean Absolute Error (MAE):</strong> 5.11</li>
-        <li><strong>R² Score:</strong> 0.80</li>
+       <div style="text-align: center; margin: 20px 0;">
+        <img src="Untitled28.png" style="max-width: 85%; height: auto; border: 1px solid #ccc; padding: 5px;">
+        <p style="font-size: 0.9em; color: #555;">Figure: Summary Statistics Output</p>
+    </div>
     </ul>
 
     <p>
