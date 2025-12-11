@@ -390,13 +390,148 @@
 
 <section id="model-training">
     <h2>4. Model Training and Testing</h2>
-    <p>Write about model training</p>
+    <p>
+        After completing the data cleaning and exploratory analysis, the next step in the data science workflow 
+        involved building predictive models to estimate vaccination coverage. 
+        The objective of this stage was to determine whether vaccination rates among pregnant women can be 
+        predicted using demographic, geographic, and temporal variables such as vaccine type, state, age group, 
+        and survey year.
+    </p>
+
+    <h3>Data Preparation for Modeling</h3>
+    <p>
+        Since machine learning models require numerical values, all categorical columns 
+        (such as <em>VACCINE</em>, <em>GEOGRAPHY</em>, <em>DIMENSION</em>, etc.) 
+        were converted into numerical labels using <strong>Label Encoding</strong>. 
+        This transformed the dataset into a form that could be processed by machine learning algorithms 
+        without losing the underlying categorical relationships.
+    </p>
+
+    <p>
+        The input features included:</p>
+    <ul>
+        <li><strong>VACCINE</strong> (Influenza or Tdap)</li>
+        <li><strong>GEOGRAPHY</strong> (State/National)</li>
+        <li><strong>GEOGRAPHY-TYPE</strong></li>
+        <li><strong>DIMENSION-TYPE</strong> (Age or Race/Ethnicity)</li>
+        <li><strong>DIMENSION</strong> (Specific age group or demographic group)</li>
+        <li><strong>SURVEY-YEAR</strong> (2012–2022)</li>
+    </ul>
+
+    <p>
+        The target variable was the <strong>ESTIMATE</strong>, 
+        which represents the vaccination coverage percentage.
+    </p>
+
+    <p>
+        The dataset was then split into <strong>80% training data</strong> and 
+        <strong>20% testing data</strong> using the <em>train_test_split</em> method. 
+        This ensured fair evaluation by training the model on one portion of the data and testing it on unseen values.
+    </p>
+
+    <h3>Model 1: Linear Regression</h3>
+    <p>
+        The first model applied was a <strong>Linear Regression</strong> model. 
+        This simple model attempts to describe the relationship between predictors and vaccination coverage 
+        through a straight-line equation. 
+        While linear models are easy to interpret, they may not fully capture complex nonlinear relationships 
+        present in public health data.
+    </p>
+
+    <p>The Linear Regression model produced the following performance metrics:</p>
+    <ul>
+        <li><strong>Mean Absolute Error (MAE):</strong> 9.79</li>
+        <li><strong>R² Score:</strong> 0.27</li>
+    </ul>
+
+    <h3>Model 2: Random Forest Regressor</h3>
+    <p>
+        To improve predictive performance, a <strong>Random Forest Regressor</strong> 
+        was trained. This model uses multiple decision trees and combines their outputs, 
+        making it capable of capturing complex patterns, nonlinear interactions, 
+        and variations in the dataset.
+    </p>
+
+    <p>The Random Forest model achieved significantly better results:</p>
+    <ul>
+        <li><strong>Mean Absolute Error (MAE):</strong> 5.11</li>
+        <li><strong>R² Score:</strong> 0.80</li>
+    </ul>
+
+    <p>
+        These metrics indicate that the Random Forest model explains approximately 
+        <strong>80% of the variation</strong> in vaccination coverage data, 
+        making it a strong predictive model compared to Linear Regression. 
+        The model successfully leveraged demographic, geographic, and temporal factors 
+        to produce more accurate predictions.
+    </p>
 </section>
+
 
 <section id="interpretation">
     <h2>5. Interpretation of Results</h2>
-    <p>Discuss the meaning of your results...</p>
+    <p>
+        The results obtained from the two machine learning models provide important insights into the 
+        predictability of vaccination coverage among pregnant women. By examining the performance metrics 
+        and comparing both models, we can understand how well different demographic and geographic factors 
+        contribute to predicting vaccination rates.
+    </p>
+
+    <h3>Model Performance Comparison</h3>
+    <p>
+        The <strong>Linear Regression</strong> model delivered modest performance, with an R² score of 0.27. 
+        This indicates that the linear model could only explain about 27% of the variance in vaccination coverage. 
+        The relatively high MAE value (9.79) suggests that its predictions deviated from the actual coverage values 
+        by nearly 10 percentage points on average. 
+        This outcome reflects the limitations of linear models when the data contains nonlinear interactions, 
+        such as varying demographic patterns and state-specific differences.
+    </p>
+
+    <p>
+        In contrast, the <strong>Random Forest Regressor</strong> demonstrated much stronger predictive capability. 
+        With an R² score of 0.80, the model was able to explain 80% of the variability in the dataset, 
+        showing that vaccination rates can be predicted effectively using factors such as demographic group, 
+        vaccine type, and survey year. The MAE dropped to 5.11, meaning predictions were much closer to the 
+        actual values.
+    </p>
+
+    <h3>Insights from the Modeling Process</h3>
+    <p>
+        Several meaningful insights emerge from these results:
+    </p>
+    <ul>
+        <li>
+            <strong>Vaccination coverage is influenced by demographic and geographic factors.</strong><br>
+            Differences between age groups, racial/ethnic groups, and states contribute significantly to the model’s predictive ability.
+        </li>
+        <li>
+            <strong>Year-to-year changes matter.</strong><br>
+            The survey year has predictive power, likely due to policy changes, awareness campaigns, and 
+            public health interventions over time.
+        </li>
+        <li>
+            <strong>Nonlinear models capture complex patterns better.</strong><br>
+            The large difference between Linear Regression and Random Forest performance shows that vaccination behavior 
+            is not linear and requires more flexible modeling techniques.
+        </li>
+    </ul>
+
+    <h3>Overall Interpretation</h3>
+    <p>
+        The modeling results demonstrate that vaccination coverage among pregnant women can be 
+        predicted with relatively high accuracy using key variables in the dataset. 
+        The Random Forest model, in particular, highlights the strong influence of demographic factors 
+        and geographic differences on vaccination behavior.
+    </p>
+
+    <p>
+        These findings emphasize how machine learning can support public health planning by identifying 
+        which groups may need more targeted communication, outreach, or vaccination programs. 
+        Although no predictive model is perfect, the results indicate that data-driven approaches 
+        can effectively guide decision-making in maternal health and vaccination initiatives.
+    </p>
 </section>
+
 
 <section id="conclusion">
     <h2>Conclusion</h2>
